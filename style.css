@@ -10,38 +10,73 @@ html {
   background-size: cover;
 }
 
-hr {
-  border-color: #691e00;
-  border-width: 3px;
-  max-width: 65px;
+body {
+  background: url(header.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(31, 31, 31);
 }
 
-h1 {
-  font-size: 3rem;
-  color: #e2dbdb;
+.containAll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+
 }
 
-.buffer {
-  height: 10rem;
+.container {
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
 }
 
 .btn {
-  font-weight: 700;
-  border-radius: 300px;
-  text-transform: uppercase;
+  margin-top: 1em;
+  color: orange;
+  border-radius: 200px;
+  border-color: orange;
 }
 
-.btn-xl {
-  padding: 1rem 2rem;
-  
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open>.dropdown-toggle.btn-outline-primary {
+  color: white;
+  background-color:orange;
+  border-color: orange; /*set the color you want here*/
 }
 
-.btn-primary {
-  background-color: #f05f44;
-  border-color: #f05f44;
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  /*font-family: monospace;*/
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
 
-.btn-primary:hover {
-  background-color: #691e00;
-  border-color: #691e00;
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
